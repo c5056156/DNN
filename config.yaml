@@ -1,0 +1,27 @@
+# Model configuration
+seed: 42
+device: "cuda"
+
+dataset:
+  name: "daniel3303/StoryReasoning"
+  subset_size: 400
+  k_frames: 3
+  img_size: 224
+
+training:
+  batch_size: 4
+  epochs: 1
+  lr: 2e-4
+  save_every_n_steps: 10
+
+model:
+  img_feat_dim: 512
+  txt_hidden_dim: 512
+  fused_dim: 512
+  seq_hidden_dim: 512
+  latent_dim: 512
+
+paths:
+  samples_dir: "results/samples_seq"
+  plots_dir: "results/plots"
+  checkpoints_dir: "checkpoints_seq"
